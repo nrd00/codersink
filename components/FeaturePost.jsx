@@ -19,13 +19,13 @@ const FeaturePost = () => {
 
           <Link
             href="/blogs"
-            className="text-sm font-semibold text-emerald-600 hover:text-emerald-700"
+            className="text-sm font-semibold text-indigo-600 hover:text-indigo-700"
           >
             View all posts →
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           {featuredBlogs.map((blog) => (
             <BlogCard key={blog.id} blog={blog} />
           ))}
