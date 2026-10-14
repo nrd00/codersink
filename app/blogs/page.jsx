@@ -1,9 +1,18 @@
 import FilteredBlogs from "@/components/FilteredBlogs";
+import Link from "next/link";
 
 const page = () => {
   return (
     <section>
       <div className="mb-10 container">
+        {/* Breadcrumb */}
+        <nav className="mt-6 flex flex-wrap gap-2 text-sm text-slate-500">
+          <Link href="/" className="hover:text-indigo-600">
+            Home
+          </Link>
+          <span>/</span>
+          <span>blogs</span>
+        </nav>
         <h1 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl mt-5">
           Explore All blogs
         </h1>

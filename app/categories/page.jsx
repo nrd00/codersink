@@ -29,10 +29,18 @@ export default function CategoriesPage() {
   const categories = [...new Set(blogs.map((blog) => blog.category))];
 
   return (
-    <main className="min-h-screen bg-slate-50 px-4 py-10 sm:px-6 lg:px-8">
+    <main>
       <div className="container">
+        {/* Breadcrumb */}
+        <nav className="pt-6 flex flex-wrap gap-2 text-sm text-slate-500">
+          <Link href="/" className="hover:text-indigo-600">
+            Home
+          </Link>
+          <span>/</span>
+          <span>categories</span>
+        </nav>
         {/* Page heading */}
-        <div className="mb-10">
+        <div className="mb-10 mt-5">
           <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
             Explore Categories
           </h1>
