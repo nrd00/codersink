@@ -52,7 +52,7 @@ export default async function BlogDetailsPage({ params }) {
     .slice(0, 3);
 
   return (
-    <main className="min-h-screen bg-slate-50 px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-slate-50 p-8 sm:px-6 lg:px-8">
       <article className="container">
         {/* Breadcrumb */}
         <nav className="mb-6 flex flex-wrap gap-2 text-sm text-slate-500">
@@ -147,6 +147,17 @@ export default async function BlogDetailsPage({ params }) {
               </p>
             )}
           </div>
+        </div>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {blog.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600"
+            >
+              #{tag}
+            </span>
+          ))}
         </div>
 
         <Link
